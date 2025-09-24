@@ -12,7 +12,7 @@
 //! ## Examples
 //!
 //! ```
-//! use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
+//! use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
 //!
 //! // Convert between units
 //! let freezing = Temperature::from_unit::<Celsius>(0.0);
@@ -46,7 +46,7 @@ pub enum TemperatureDimension {}
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
+/// use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
 ///
 /// let boiling = Temperature::from_unit::<Celsius>(100.0);
 /// let fahrenheit_value = boiling.to_unit::<Fahrenheit>(); // 212.0
@@ -61,7 +61,7 @@ pub type Temperature = Quantity<Kelvin>;
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::temperature::{Temperature, Kelvin};
+/// use uom::unit_conversion::temperature::{Temperature, Kelvin};
 ///
 /// let absolute_zero = Temperature::from_unit::<Kelvin>(0.0);
 /// assert_eq!(absolute_zero.to_unit::<Kelvin>(), 0.0);
@@ -92,7 +92,7 @@ impl UnitConversion for Kelvin {
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::temperature::{Temperature, Celsius, Kelvin};
+/// use uom::unit_conversion::temperature::{Temperature, Celsius, Kelvin};
 ///
 /// let freezing = Temperature::from_unit::<Celsius>(0.0);
 /// assert_eq!(freezing.to_unit::<Kelvin>(), 273.15);
@@ -121,7 +121,7 @@ impl UnitConversion for Celsius {
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::temperature::{Temperature, Fahrenheit, Celsius};
+/// use uom::unit_conversion::temperature::{Temperature, Fahrenheit, Celsius};
 ///
 /// let room_temp = Temperature::from_unit::<Fahrenheit>(68.0);
 /// assert_eq!(room_temp.to_unit::<Celsius>(), 20.0);

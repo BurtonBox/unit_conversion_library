@@ -12,7 +12,7 @@
 //! ## Examples
 //!
 //! ```
-//! use utilities::unit_conversion::length::{Length, Meter, Kilometer, Foot};
+//! use uom::unit_conversion::length::{Length, Meter, Kilometer, Foot};
 //!
 //! // Convert between units
 //! let distance = Length::from_unit::<Kilometer>(1.0);
@@ -44,7 +44,7 @@ pub enum LengthDimension {}
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::length::{Length, Meter, Kilometer};
+/// use uom::unit_conversion::length::{Length, Meter, Kilometer};
 ///
 /// let distance = Length::from_unit::<Kilometer>(5.0);
 /// let meter_value = distance.to_unit::<Meter>(); // 5000.0
@@ -59,7 +59,7 @@ pub type Length = Quantity<Meter>;
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::length::{Length, Meter};
+/// use uom::unit_conversion::length::{Length, Meter};
 ///
 /// let length = Length::from_unit::<Meter>(100.0);
 /// assert_eq!(length.to_unit::<Meter>(), 100.0);
@@ -90,7 +90,7 @@ impl UnitConversion for Meter {
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::length::{Length, Kilometer, Meter};
+/// use uom::unit_conversion::length::{Length, Kilometer, Meter};
 ///
 /// let distance = Length::from_unit::<Kilometer>(2.5);
 /// assert_eq!(distance.to_unit::<Meter>(), 2500.0);
@@ -121,7 +121,7 @@ impl UnitConversion for Kilometer {
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::length::{Length, Foot, Meter};
+/// use uom::unit_conversion::length::{Length, Foot, Meter};
 ///
 /// let height = Length::from_unit::<Foot>(6.0);
 /// assert!((height.to_unit::<Meter>() - 1.8288).abs() < 1e-10);

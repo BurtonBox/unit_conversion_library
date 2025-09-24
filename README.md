@@ -32,14 +32,14 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-utilities = { path = "." }
+uom = { path = "." }
 ```
 
 ### Basic Usage
 
 ```rust
-use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
-use utilities::unit_conversion::length::{Length, Meter, Kilometer, Foot};
+use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
+use uom::unit_conversion::length::{Length, Meter, Kilometer, Foot};
 
 fn main() {
     // Temperature conversions
@@ -129,7 +129,7 @@ cargo clippy
 ### Temperature Conversions
 
 ```rust
-use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
+use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
 
 // Common temperature conversions
 let freezing = Temperature::from_unit::<Celsius>(0.0);
@@ -143,7 +143,7 @@ assert!((body_temp.to_unit::<Celsius>() - 37.0).abs() < 0.1);
 ### Length Conversions
 
 ```rust
-use utilities::unit_conversion::length::{Length, Meter, Kilometer, Foot};
+use uom::unit_conversion::length::{Length, Meter, Kilometer, Foot};
 
 // Distance calculations
 let marathon = Length::from_unit::<Kilometer>(42.195);
@@ -170,7 +170,7 @@ This library demonstrates several Rust programming principles:
 To add a new unit, implement the `UnitConversion` trait:
 
 ```rust
-use utilities::unit_conversion::{UnitConversion, Quantity};
+use uom::unit_conversion::{UnitConversion, Quantity};
 
 // Define your dimension (if new)
 pub enum MassDimension {}
@@ -200,4 +200,4 @@ Contributions are welcome! Please ensure:
 
 ## License
 
-This project is a utilities/educational example. See the repository for license details.
+This project is a uom/educational example. See the repository for license details.

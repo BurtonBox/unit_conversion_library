@@ -17,8 +17,8 @@
 //!
 //! The type system prevents compilation of invalid operations:
 //! ```compile_fail
-//! # use utilities::unit_conversion::temperature::{Temperature, Celsius};
-//! # use utilities::unit_conversion::length::{Length, Meter};
+//! # use uom::unit_conversion::temperature::{Temperature, Celsius};
+//! # use uom::unit_conversion::length::{Length, Meter};
 //! let temp = Temperature::from_unit::<Celsius>(25.0);
 //! let dist = Length::from_unit::<Meter>(100.0);
 //! // This won't compile - can't convert temperature to length:
@@ -28,8 +28,8 @@
 //! ## Example Usage
 //!
 //! ```
-//! use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
-//! use utilities::unit_conversion::length::{Length, Meter, Kilometer};
+//! use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
+//! use uom::unit_conversion::length::{Length, Meter, Kilometer};
 //!
 //! // Temperature conversions
 //! let temp = Temperature::from_unit::<Celsius>(100.0);
@@ -54,7 +54,7 @@ use std::marker::PhantomData;
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::{UnitConversion, Quantity};
+/// use uom::unit_conversion::{UnitConversion, Quantity};
 /// use std::marker::PhantomData;
 ///
 /// // Define a custom dimension
@@ -110,7 +110,7 @@ pub trait UnitConversion {
 /// # Examples
 ///
 /// ```
-/// use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
+/// use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
 ///
 /// // Create a temperature from Celsius
 /// let temp = Temperature::from_unit::<Celsius>(100.0);
@@ -145,7 +145,7 @@ impl<U: UnitConversion> Quantity<U> {
     /// # Examples
     ///
     /// ```
-    /// use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
+    /// use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit};
     ///
     /// // Create temperature from Celsius
     /// let temp1 = Temperature::from_unit::<Celsius>(0.0);
@@ -182,7 +182,7 @@ impl<U: UnitConversion> Quantity<U> {
     /// # Examples
     ///
     /// ```
-    /// use utilities::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
+    /// use uom::unit_conversion::temperature::{Temperature, Celsius, Fahrenheit, Kelvin};
     ///
     /// let temp = Temperature::from_unit::<Celsius>(100.0);
     ///
@@ -206,7 +206,7 @@ impl<U: UnitConversion> Quantity<U> {
     /// # Examples
     ///
     /// ```
-    /// use utilities::unit_conversion::temperature::{Temperature, Celsius};
+    /// use uom::unit_conversion::temperature::{Temperature, Celsius};
     ///
     /// let temp = Temperature::from_unit::<Celsius>(0.0);
     /// assert_eq!(temp.in_base(), 273.15); // 0°C = 273.15K (base unit)
