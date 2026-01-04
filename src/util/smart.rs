@@ -19,9 +19,8 @@ impl fmt::Display for SmartF64 {
             Mode::Trunc => (self.value * factor).trunc() / factor,
         };
 
-        // Write with precision, then trim *inside the formatter*
-        let mut buf = ryu::Buffer::new();
-        let mut s = buf.format_finite(v).to_string();
+        // format with max precision, then trim
+        let mut s = format!("{:.1$}", v, self.precision);
 
         if let Some(dot) = s.find('.') {
             let keep = dot + 1 + self.precision;
