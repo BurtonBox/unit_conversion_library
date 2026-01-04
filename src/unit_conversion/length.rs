@@ -23,6 +23,27 @@
 //! let one_foot = Length::from_unit::<Foot>(1.0);
 //! assert_eq!(one_foot.to_unit::<Meter>(), 0.3048);
 //! ```
+//!
+//!
+/* TODO: SUPPORT ALL THESE.
+// Gigaparsec (Gpc) – One billion parsecs, used in cosmology for intergalactic distances.
+// Megaparsec (Mpc) – One million parsecs, commonly used in extragalactic astronomy.
+// Kiloparsec (kpc) – One thousand parsecs.
+// Parsec (pc) – Approximately 3.26 light-years or 3.08 × 10¹⁶ meters.
+// Light-year (ly) – Distance light travels in one year (~9.46 × 10¹⁵ meters).
+// Astronomical Unit (AU) – Average Earth-Sun distance (~1.496 × 10¹¹ meters).
+//
+// Kilometer (km) – 1,000 meters.
+// Meter (m) – SI base unit of length.
+// Decimeter (dm) – 0.1 meters.
+// Centimeter (cm) – 0.01 meters.
+// Millimeter (mm) – 0.001 meters.
+// Micrometer (µm) – 10⁻⁶ meters.
+// Nanometer (nm) – 10⁻⁹ meters.
+// Picometer (pm) – 10⁻¹² meters.
+// Femtometer (fm) – Also called a fermi, 10⁻¹⁵ meters, used for nuclear scales
+// Planck length (ℓₚ) – ~1.616 × 10⁻³⁵ meters
+// */
 
 use crate::unit_conversion::{Quantity, UnitConversion};
 
